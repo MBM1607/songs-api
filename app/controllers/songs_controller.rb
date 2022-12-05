@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class SongsController < ApplicationController
-  before_action :set_song, only: %i[ show update destroy ]
+  before_action :set_song, only: %i[show update destroy]
 
   # GET /songs
   def index
@@ -39,13 +41,14 @@ class SongsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_song
-      @song = Song.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def song_params
-      params.require(:song).permit(:title, :artist, :genre, :lyrics)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_song
+    @song = Song.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def song_params
+    params.require(:song).permit(:title, :artist, :genre, :lyrics)
+  end
 end
