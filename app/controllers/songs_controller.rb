@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
+# Controller for the CRUD functionality of songs resource
 class SongsController < ApplicationController
   before_action :set_song, only: %i[show update destroy]
 
   # GET /songs
+  # This utilizes elasticsearch based on query params
   def index
-    @songs = Song.all
+    query = params['query'] || ''
+    res = Song.search(query)
 
-    render json: @songs
+    render json: res.response['hits']['hits']
   end
 
   # GET /songs/1
