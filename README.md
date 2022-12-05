@@ -1,24 +1,29 @@
-# README
+# Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple songs CRUD + search API created with rails and searchable through elasticsearch
 
-Things you may want to cover:
+## Stack
 
-* Ruby version
+- Rails 7
+- Elasticsearch 8.5
+- Ruby 3.1.3
 
-* System dependencies
+## Setup
 
-* Configuration
+1. Install postgres
+2. Install Ruby 3.1.3 and Rails 7
+3. Install Docker + Docker Compose
 
-* Database creation
+### Database creation
 
-* Database initialization
+`bin/rails db:create db:migrate`
 
-* How to run the test suite
+### Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+`bin/rails db:seed`
 
-* Deployment instructions
+### Tests
 
-* ...
+Unit tests, and integration tests are included using minitest and rails default framework.
+These can be run with
+`bin/rails test`
