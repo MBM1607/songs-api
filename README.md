@@ -13,6 +13,8 @@ A simple songs CRUD + search API created with rails and searchable through elast
 1. Install postgres
 2. Install Ruby 3.1.3 and Rails 7
 3. Install Docker + Docker Compose
+4. Set DATABASE_URL for development postgres instance in .rbenv-vars
+5. Setup proper .env using .env.example as template
 
 ### Database creation
 
@@ -20,7 +22,19 @@ A simple songs CRUD + search API created with rails and searchable through elast
 
 ### Database initialization
 
-`bin/rails db:seed`
+Run rails console and import the data from csv into the new postgres database
+
+```bash
+rails c
+> Song.import_csv!
+```
+
+### Run API
+
+```bash
+docker-compose up -d
+rails s
+```
 
 ### Tests
 
