@@ -22,7 +22,7 @@ A simple songs CRUD + search API created with rails and searchable through elast
 
 ### Database initialization
 
-Run rails console and import the data from csv into the new postgres database
+Run rails console and import the data from csv into the new postgres database.
 
 ```bash
 rails c
@@ -41,3 +41,8 @@ rails s
 Unit tests, and integration tests are included using minitest and rails default framework.
 These can be run with
 `bin/rails test`
+
+### Acknowledgements
+
+Song Dataset taken from <https://data.mendeley.com/datasets/3t9vbwxgr5/2>
+> Moura, Luan; Fontelles, Emanuel; Sampaio, Vinicius; França, Mardônio (2020), “Music Dataset: Lyrics and Metadata from 1950 to 2019”, Mendeley Data, V2, doi: 10.17632/3t9vbwxgr5.2
