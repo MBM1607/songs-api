@@ -1,0 +1,11 @@
+Metrics/MethodLength:
+  Max: 100
+Metrics/BlockLength:
+  Max: 100
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  SafeAutoCorrect: true
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
